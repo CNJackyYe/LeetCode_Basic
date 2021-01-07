@@ -31,7 +31,6 @@
 #  0 <= prices[i]<= 10 ^ 4
 
 from typing import List
-import time
 
 
 class Solution:
