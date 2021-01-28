@@ -16,7 +16,6 @@
 #    *
 
 
-
 class Solution:
     def DrawDiamond(self, num: int):
         self.DrawSon(1, (num * 2 - 1))
@@ -33,4 +32,4 @@ class Solution:
 
 
 su = Solution()
-su.DrawDiamond(4)
+su.DrawDiamond(100)
