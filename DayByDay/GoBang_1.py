@@ -41,7 +41,7 @@ class Solution:
 
     def GeneralGoBang(self, str1: str, str2: str, count: int, Chess: List[str]) -> List[str]:
         panChar = [' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
-        if panChar.__contains__(str1) & panChar.__contains__(str1):
+        if panChar.__contains__(str1) and panChar.__contains__(str1):
 
             Chess.append([str1, str2, count % 2 == 1 and '●' or '○'])
             #colList = []
