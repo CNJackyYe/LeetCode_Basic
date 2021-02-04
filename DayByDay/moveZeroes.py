@@ -13,9 +13,30 @@
 # 作者：力扣 (LeetCode)
 # 来源：力扣（LeetCode）
 # 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+from typing import List
 
 
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
-        for i in range(0,len(nums)):
-            nums
+        nlen = len(nums)
+        for i in range(0, nlen):
+            if (nums[nlen - 1 - i] == 0) and (nlen - i <= nlen):
+                for j in range(nlen - 1 - i, nlen):
+                    if j + 1 < nlen:
+                        nums[j], nums[j + 1] = nums[j + 1], nums[j]
+        print(nums)
+
+    def moveZeroes2(self, nums: List[int]) -> None:
+        if not nums:
+            return 0
+        j = 0
+        for i in range(0, len(nums)):
+            if nums[i]:
+                nums[i], nums[j] = nums[j], nums[i]
+                j += 1
+        print(nums)
+
+
+su = Solution()
+su.moveZeroes([1, 0, 3, 3, 1])
+su.moveZeroes2([1, 0, 3, 3, 1])
